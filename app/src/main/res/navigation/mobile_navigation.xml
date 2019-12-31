@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.d.pivp.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.d.pivp.ui.user.UserFragment"
+        android:label="@string/user"
+        tools:layout="@layout/fragment_user" />
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.d.pivp.ui.map.MapFragment"
+        android:label="@string/map"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.d.pivp.ui.setting.SettingFragment"
+        android:label="@string/setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_addTrailerFragment"
+            app:destination="@id/addTrailerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trailerFragment"
+        android:name="com.d.pivp.ui.trailer.TrailerFragment"
+        android:label="@string/trailer"
+        tools:layout="@layout/fragment_trailer" />
+    <fragment
+        android:id="@+id/addTrailerFragment"
+        android:name="com.d.pivp.ui.setting.add_trailer.AddTrailerFragment"
+        android:label="Add Trailer"
+        tools:layout="@layout/add_trailer_fragment" >
+        <action
+            android:id="@+id/action_addTrailerFragment_to_addGroupFragment"
+            app:destination="@id/addGroupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGroupFragment"
+        android:name="com.d.pivp.ui.setting.add_group.AddGroupFragment"
+        android:label="Add Group"
+        tools:layout="@layout/add_group_fragment2" />
+
+</navigation>
