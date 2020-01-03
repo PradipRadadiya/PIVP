@@ -62,7 +62,6 @@ class HomeFragment : Fragment() {
 
     private fun listQueryData(){
         val qdata =   userBox.query().equal(User_.name, "Vishal").build().find()
-
         for(data in qdata){
             Log.e("data","----------"+ data.name)
         }

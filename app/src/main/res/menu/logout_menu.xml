@@ -16,7 +16,7 @@
 
     <item
         android:id="@+id/item_calender"
-        android:title="@string/calender"
+        android:title="Setting"
          />
 
 </menu>

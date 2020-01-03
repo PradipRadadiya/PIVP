@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 
 import com.d.pivp.R
+import kotlinx.android.synthetic.main.add_group_fragment2.*
 
 class AddGroupFragment : Fragment() {
 
@@ -28,6 +30,10 @@ class AddGroupFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(AddGroupViewModel::class.java)
         // TODO: Use the ViewModel
+
+        imageView.setOnClickListener {
+            it.findNavController().navigate(R.id.imagePriviewFragment)
+        }
     }
 
 }

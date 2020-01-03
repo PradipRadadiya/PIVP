@@ -51,6 +51,15 @@
         android:id="@+id/addGroupFragment"
         android:name="com.d.pivp.ui.setting.add_group.AddGroupFragment"
         android:label="Add Group"
-        tools:layout="@layout/add_group_fragment2" />
+        tools:layout="@layout/add_group_fragment2" >
+        <action
+            android:id="@+id/action_addGroupFragment_to_imagePriview"
+            app:destination="@id/imagePriviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imagePriviewFragment"
+        android:name="com.d.pivp.ui.setting.ImagePriview"
+        android:label="image_priview_fragment"
+        tools:layout="@layout/image_priview_fragment" />
 
 </navigation>
